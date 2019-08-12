@@ -17,16 +17,16 @@ public class TennisGameTieBreakTest {
 		activateTieBreak();
 	}
 
-	private void haveASet(Player player1, Player player2, Integer setScore1, Integer setScore2) {
+	private void haveASet(Player player1, Player player2, int setScore1, int setScore2) {
 
 		tennisGame.winsPoint(player1);
 		tennisGame.winsPoint(player1);
 		tennisGame.winsPoint(player2);
 		tennisGame.winsPoint(player1);
 		tennisGame.winsPoint(player1);
-		assertEquals(Integer.valueOf(0), player1.getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), player2.getScore().getGameScore());
-		assertEquals(Integer.valueOf(setScore1 + 1), player1.getScore().getSetScore());
+		assertEquals(0, player1.getScore().getGameScore());
+		assertEquals(0, player2.getScore().getGameScore());
+		assertEquals(setScore1 + 1, player1.getScore().getSetScore());
 		assertEquals(setScore2, player2.getScore().getSetScore());
 
 	}
@@ -84,12 +84,12 @@ public class TennisGameTieBreakTest {
 	@Test
 	public void playerOneShouldReturnSetScore_6_and_playerTwoShouldReturnSetScore_6() {
 
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		assertFalse(tennisGame.getPlayer1().isTheSetWon());
 		assertFalse(tennisGame.getPlayer2().isTheSetWon());
 
@@ -100,12 +100,12 @@ public class TennisGameTieBreakTest {
 
 		/********************************************************************************************/
 		// this is a Tie Break
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer2().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer2().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		assertFalse(tennisGame.getPlayer1().isTheSetWon());
 		assertFalse(tennisGame.getPlayer2().isTheSetWon());
 
@@ -114,12 +114,12 @@ public class TennisGameTieBreakTest {
 		/********************************************************************************************/
 		// 1 player1 win a point in the tie break
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(1), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer2().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(1, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer2().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		assertFalse(tennisGame.getPlayer1().isTheSetWon());
 		assertFalse(tennisGame.getPlayer2().isTheSetWon());
 
@@ -128,12 +128,12 @@ public class TennisGameTieBreakTest {
 		/********************************************************************************************/
 		// 1 player2 win a point in the tie break
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(1), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(1), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer2().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(1, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(1, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer2().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		assertFalse(tennisGame.getPlayer1().isTheSetWon());
 		assertFalse(tennisGame.getPlayer2().isTheSetWon());
 
@@ -142,12 +142,12 @@ public class TennisGameTieBreakTest {
 		/********************************************************************************************/
 		// 2 player1 win a point in the tie break
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(2), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(1), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer2().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(2, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(1, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer2().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		assertFalse(tennisGame.getPlayer1().isTheSetWon());
 		assertFalse(tennisGame.getPlayer2().isTheSetWon());
 
@@ -156,12 +156,12 @@ public class TennisGameTieBreakTest {
 		/********************************************************************************************/
 		// 3 player1 win a point in the tie break
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(3), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(1), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer2().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(3, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(1, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer2().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		assertFalse(tennisGame.getPlayer1().isTheSetWon());
 		assertFalse(tennisGame.getPlayer2().isTheSetWon());
 
@@ -170,12 +170,12 @@ public class TennisGameTieBreakTest {
 		/********************************************************************************************/
 		// 2 player2 win a point in the tie break
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(3), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(2), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer2().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(3, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(2, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer2().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		assertFalse(tennisGame.getPlayer1().isTheSetWon());
 		assertFalse(tennisGame.getPlayer2().isTheSetWon());
 
@@ -184,12 +184,12 @@ public class TennisGameTieBreakTest {
 		/********************************************************************************************/
 		// 4 player1 win a point in the tie break
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(4), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(2), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer2().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(4, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(2, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer2().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		assertFalse(tennisGame.getPlayer1().isTheSetWon());
 		assertFalse(tennisGame.getPlayer2().isTheSetWon());
 
@@ -198,12 +198,12 @@ public class TennisGameTieBreakTest {
 		/********************************************************************************************/
 		// 5 player1 win a point in the tie break
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(5), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(2), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer2().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(5, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(2, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer2().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		assertFalse(tennisGame.getPlayer1().isTheSetWon());
 		assertFalse(tennisGame.getPlayer2().isTheSetWon());
 
@@ -212,12 +212,12 @@ public class TennisGameTieBreakTest {
 		/********************************************************************************************/
 		// 6 player1 win a point in the tie break
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(2), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer2().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(2, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(6, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer2().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		assertFalse(tennisGame.getPlayer1().isTheSetWon());
 		assertFalse(tennisGame.getPlayer2().isTheSetWon());
 
@@ -226,12 +226,12 @@ public class TennisGameTieBreakTest {
 		/********************************************************************************************/
 		// 7 player1 win a point in the tie break
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getTieBreakScore());
-		assertEquals(Integer.valueOf(7), tennisGame.getPlayer1().getScore().getSetScore());
-		assertEquals(Integer.valueOf(6), tennisGame.getPlayer2().getScore().getSetScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getTieBreakScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getTieBreakScore());
+		assertEquals(7, tennisGame.getPlayer1().getScore().getSetScore());
+		assertEquals(6, tennisGame.getPlayer2().getScore().getSetScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 
 		// the player1 finally win the set and the game should be over
 		assertTrue(tennisGame.getPlayer1().isTheSetWon());

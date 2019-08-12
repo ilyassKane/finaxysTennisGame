@@ -22,8 +22,8 @@ public class TennisGameTest {
 		// ([player1 : 15]
 		// [player2 : 0])
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(15), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(15, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		// the game is not win by anyone for now
 		assertFalse(tennisGame.getPlayer1().isTheGameWon());
 		assertFalse(tennisGame.getPlayer2().isTheGameWon());
@@ -32,8 +32,8 @@ public class TennisGameTest {
 		// ([player1 : 30]
 		// [player2 : 0])
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(30), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(30, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		// the game is not won by anyone for now
 		assertFalse(tennisGame.getPlayer1().isTheGameWon());
 		assertFalse(tennisGame.getPlayer2().isTheGameWon());
@@ -42,8 +42,8 @@ public class TennisGameTest {
 		// ([player1 : 30]
 		// [player2 : 15])
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(30), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(15), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(30, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(15, tennisGame.getPlayer2().getScore().getGameScore());
 		// the game is not won by anyone for now
 		assertFalse(tennisGame.getPlayer1().isTheGameWon());
 		assertFalse(tennisGame.getPlayer2().isTheGameWon());
@@ -52,8 +52,8 @@ public class TennisGameTest {
 		// ([player1 : 40]
 		// [player2 : 15])
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(15), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(15, tennisGame.getPlayer2().getScore().getGameScore());
 		// the game is not won by anyone for now
 		assertFalse(tennisGame.getPlayer1().isTheGameWon());
 		assertFalse(tennisGame.getPlayer2().isTheGameWon());
@@ -62,8 +62,8 @@ public class TennisGameTest {
 		// ([player1 : 40] /
 		// [player2 : 30])
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(30), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(30, tennisGame.getPlayer2().getScore().getGameScore());
 		// the game is not won by anyone for now
 		assertFalse(tennisGame.getPlayer1().isTheGameWon());
 		assertFalse(tennisGame.getPlayer2().isTheGameWon());
@@ -72,8 +72,8 @@ public class TennisGameTest {
 		// ([player1 : 0] /
 		// [player2 : 0]),
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		// the game is won by the first player now
 		assertTrue(tennisGame.getPlayer1().isTheGameWon());
 

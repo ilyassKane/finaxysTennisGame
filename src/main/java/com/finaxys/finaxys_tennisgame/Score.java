@@ -2,41 +2,41 @@ package com.finaxys.finaxys_tennisgame;
 
 public class Score {
 	
-	private Integer gameScore;
+	private int gameScore;
 
-	private Integer setScore;
+	private int setScore;
 
-	private Integer tieBreakScore;
+	private int tieBreakScore;
 
 	private boolean deuceRuleAdvantage;
 
-	public Score(Integer gameScore, Integer setScore, Integer tieBreakScore) {
+	public Score(int gameScore, int setScore, int tieBreakScore) {
 		this.gameScore = gameScore;
 		this.setScore = setScore;
 		this.tieBreakScore = tieBreakScore;
 	}
 
-	public Integer getGameScore() {
+	public int getGameScore() {
 		return gameScore;
 	}
 
-	public void setGameScore(Integer gameScore) {
+	public void setGameScore(int gameScore) {
 		this.gameScore = gameScore;
 	}
 
-	public Integer getSetScore() {
+	public int getSetScore() {
 		return setScore;
 	}
 
-	public void setSetScore(Integer setScore) {
+	public void setSetScore(int setScore) {
 		this.setScore = setScore;
 	}
 
-	public Integer getTieBreakScore() {
+	public int getTieBreakScore() {
 		return tieBreakScore;
 	}
 
-	public void setTieBreakScore(Integer tieBreakScore) {
+	public void setTieBreakScore(int tieBreakScore) {
 		this.tieBreakScore = tieBreakScore;
 	}
 

@@ -19,28 +19,28 @@ public class TennisGameDeuceRuleTest {
 	// this methode create a Deuce Rule situation
 	public void activateTheDeuceRule() {
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(15), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(15, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(30), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(30, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(30), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(15), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(30, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(15, tennisGame.getPlayer2().getScore().getGameScore());
 
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(15), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(15, tennisGame.getPlayer2().getScore().getGameScore());
 
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(30), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(30, tennisGame.getPlayer2().getScore().getGameScore());
 
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer2().getScore().getGameScore());
 
 	}
 
@@ -49,8 +49,8 @@ public class TennisGameDeuceRuleTest {
 
 		// the Second player scores
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer2().getScore().getGameScore());
 
 		// the second player took the advantage
 		assertTrue(tennisGame.getPlayer2().getScore().isDeuceRuleAdvantage());
@@ -66,13 +66,13 @@ public class TennisGameDeuceRuleTest {
 
 		// the Second player scores and got the Adv
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer2().getScore().getGameScore());
 
 		// the First player scores and cancel the Adv
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer2().getScore().getGameScore());
 
 		// we are back on the Deuce situation again
 		assertFalse(tennisGame.getPlayer2().getScore().isDeuceRuleAdvantage());
@@ -88,18 +88,18 @@ public class TennisGameDeuceRuleTest {
 
 		// the Second player scores and got the Adv
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer2().getScore().getGameScore());
 
 		// the First player scores and cancel the Adv
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer2().getScore().getGameScore());
 
 		// the First player scores again and took the Adv
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer2().getScore().getGameScore());
 
 		assertFalse(tennisGame.getPlayer2().getScore().isDeuceRuleAdvantage());
 
@@ -116,23 +116,23 @@ public class TennisGameDeuceRuleTest {
 
 		// the Second player scores and got the Adv
 		tennisGame.winsPoint(tennisGame.getPlayer2());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer2().getScore().getGameScore());
 
 		// the First player scores and cancel the Adv
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer2().getScore().getGameScore());
 
 		// the First player scores again and took the Adv
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(40), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(40, tennisGame.getPlayer2().getScore().getGameScore());
 
 		// the First player scores again and won the game
 		tennisGame.winsPoint(tennisGame.getPlayer1());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer1().getScore().getGameScore());
-		assertEquals(Integer.valueOf(0), tennisGame.getPlayer2().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer1().getScore().getGameScore());
+		assertEquals(0, tennisGame.getPlayer2().getScore().getGameScore());
 		
 		// the game is won by the first player
 		assertTrue(tennisGame.getPlayer1().isTheGameWon());
